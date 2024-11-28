@@ -43,6 +43,13 @@ public class NIO implements Runnable{
                     buffer.clear();
                 }
             }
+
+            try (RandomAccessFile file = new RandomAccessFile("./tempFile.txt", "rw")) {
+                FileChannel channel1 = file.getChannel();
+
+            }
+
+
         } catch (Exception e) {
             System.out.print(Arrays.toString(e.getStackTrace()));
         }
